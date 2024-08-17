@@ -1,0 +1,4 @@
+PermissionGroupNotification = "We would like to send you notifications when events happen";
+NSCalendarsUsageDescription = "In order to give you access to your schedules via your mobile, this app may need access to your calendar.";
+NSMicrophoneUsageDescription = "We need access to your microphone to record";
+NSLocationWhenInUseUsageDescription = "We need to access your location to provide accurate results";
