@@ -17,6 +17,7 @@ import 'package:provider/provider.dart';
 class LessonCompleteModel extends FlutterFlowModel<LessonCompleteWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   AudioPlayer? soundPlayer1;
   // Stores action output result for [Backend Call - API (streak)] action in Button widget.
   ApiCallResponse? streak;

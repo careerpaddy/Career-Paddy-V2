@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 class LeaderboardModel extends FlutterFlowModel<LeaderboardWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // Stores action output result for [Backend Call - API (getHighestScorer)] action in Leaderboard widget.
   ApiCallResponse? apiResultzqf;
 

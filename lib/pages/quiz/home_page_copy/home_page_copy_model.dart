@@ -17,6 +17,7 @@ import 'package:provider/provider.dart';
 class HomePageCopyModel extends FlutterFlowModel<HomePageCopyWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // Stores action output result for [Backend Call - API (getUser)] action in Home_pageCopy widget.
   ApiCallResponse? user;
 

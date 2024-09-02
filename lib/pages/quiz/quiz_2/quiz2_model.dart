@@ -32,6 +32,7 @@ class Quiz2Model extends FlutterFlowModel<Quiz2Widget> {
 
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   InstantTimer? instantTimer;
 
   @override

@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 class QuestionTimerPageModel extends FlutterFlowModel<QuestionTimerPageWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   InstantTimer? instantTimer;
   // Stores action output result for [Backend Call - API (getModuleQuestions)] action in Question_timer_page widget.
   ApiCallResponse? questions;

@@ -21,6 +21,7 @@ import 'package:share_plus/share_plus.dart';
 class BuddyAccountModel extends FlutterFlowModel<BuddyAccountWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // State field(s) for Switch widget.
   bool? switchValue;
   // Stores action output result for [Backend Call - API (deactivateAccount)] action in Container widget.

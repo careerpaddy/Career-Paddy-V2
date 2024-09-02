@@ -32,6 +32,7 @@ class FailedQuestionsPrompterModel
 
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   InstantTimer? instantTimer;
   // Stores action output result for [Backend Call - API (getModuleQuestions)] action in Button widget.
   ApiCallResponse? questions;

@@ -40,6 +40,7 @@ class Quiz1Model extends FlutterFlowModel<Quiz1Widget> {
 
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   InstantTimer? instantTimer;
   AudioPlayer? soundPlayer1;
   // Stores action output result for [Backend Call - API (answerQuestion)] action in Next widget.

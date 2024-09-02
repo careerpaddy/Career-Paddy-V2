@@ -41,6 +41,7 @@ class ScenarioQuestionsModel extends FlutterFlowModel<ScenarioQuestionsWidget> {
 
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   InstantTimer? instantTimer;
   AudioPlayer? soundPlayer1;
   // State field(s) for Switch widget.
@@ -50,6 +51,8 @@ class ScenarioQuestionsModel extends FlutterFlowModel<ScenarioQuestionsWidget> {
   ApiCallResponse? streakdatas;
   // Stores action output result for [Backend Call - API (answerQuestion)] action in Button widget.
   ApiCallResponse? apiResultrzl;
+  // Stores action output result for [Backend Call - API (streak)] action in Button widget.
+  ApiCallResponse? streakdata12;
   AudioPlayer? soundPlayer3;
   // Stores action output result for [Backend Call - API (answerQuestion)] action in Button widget.
   ApiCallResponse? apiResult95r;

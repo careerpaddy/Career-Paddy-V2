@@ -22,6 +22,7 @@ import 'package:provider/provider.dart';
 class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // Stores action output result for [Backend Call - API (getUser)] action in Home_page widget.
   ApiCallResponse? user;
   // Stores action output result for [Backend Call - API (getHighestScorer)] action in Home_page widget.

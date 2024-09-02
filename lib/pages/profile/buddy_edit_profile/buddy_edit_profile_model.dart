@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 class BuddyEditProfileModel extends FlutterFlowModel<BuddyEditProfileWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));

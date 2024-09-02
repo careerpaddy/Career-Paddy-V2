@@ -269,17 +269,31 @@ class _OutOfLiveWidgetState extends State<OutOfLiveWidget> {
                             await admob.showInterstitialAd();
 
                         _shouldSetState = true;
-                        logFirebaseEvent('Text_backend_call');
-                        await AppUsersTable().update(
-                          data: {
-                            'hasWatchAds': true,
-                            'lives': FFAppState().lives + 2,
-                          },
-                          matchingRows: (rows) => rows.eq(
-                            'id',
-                            currentUserUid,
-                          ),
-                        );
+                        if (widget!.user!.isSemiPremium) {
+                          logFirebaseEvent('Text_backend_call');
+                          await AppUsersTable().update(
+                            data: {
+                              'lives': FFAppState().lives + 5,
+                            },
+                            matchingRows: (rows) => rows.eq(
+                              'id',
+                              currentUserUid,
+                            ),
+                          );
+                        } else {
+                          logFirebaseEvent('Text_backend_call');
+                          await AppUsersTable().update(
+                            data: {
+                              'hasWatchAds': true,
+                              'lives': FFAppState().lives + 2,
+                            },
+                            matchingRows: (rows) => rows.eq(
+                              'id',
+                              currentUserUid,
+                            ),
+                          );
+                        }
+
                         logFirebaseEvent('Text_update_app_state');
                         FFAppState().lives = FFAppState().lives + 2;
                         setState(() {});

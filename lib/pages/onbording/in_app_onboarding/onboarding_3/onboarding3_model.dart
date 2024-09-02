@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 class Onboarding3Model extends FlutterFlowModel<Onboarding3Widget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   AudioPlayer? soundPlayer1;
   AudioPlayer? soundPlayer2;
 

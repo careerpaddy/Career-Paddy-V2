@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 class CongratsChallengeModel extends FlutterFlowModel<CongratsChallengeWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   AudioPlayer? soundPlayer1;
   AudioPlayer? soundPlayer2;
 

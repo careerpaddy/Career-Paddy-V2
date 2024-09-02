@@ -1741,6 +1741,17 @@ class _ScenarioQuestionsWidgetState extends State<ScenarioQuestionsWidget> {
                                                 },
                                               );
 
+                                              logFirebaseEvent(
+                                                  'Button_backend_call');
+                                              unawaited(
+                                                () async {
+                                                  _model.streakdata12 =
+                                                      await StreakCall.call(
+                                                    userId: currentUserUid,
+                                                  );
+                                                }(),
+                                              );
+                                              _shouldSetState = true;
                                               if (_shouldSetState)
                                                 setState(() {});
                                               return;
