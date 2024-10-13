@@ -145,9 +145,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                   ),
                                 ),
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    '9ol5x9bx' /* Life-time Access */,
-                                  ),
+                                  'Premium Offer',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -169,43 +167,6 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                         Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width: 32.0,
-                                  height: 32.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(24.0),
-                                    border: Border.all(
-                                      color:
-                                          FlutterFlowTheme.of(context).gray200,
-                                    ),
-                                  ),
-                                  child: Icon(
-                                    Icons.check_sharp,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 16.0,
-                                  ),
-                                ),
-                                Flexible(
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '0slxjwz9' /* NFT employability badge */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Recolta Alt',
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w500,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                ),
-                              ].divide(SizedBox(width: 12.0)),
-                            ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -399,7 +360,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                     'SUBSCRIPTION_COMP_pay_ON_TAP');
                                 logFirebaseEvent('pay_revenue_cat');
                                 _model.didPurchase = await revenue_cat
-                                    .purchasePackage('\$rc_lifetime');
+                                    .purchasePackage('\$rc_annual');
                                 if (_model.didPurchase!) {
                                   logFirebaseEvent('pay_backend_call');
                                   await AppUsersTable().update(
@@ -437,9 +398,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
 
                                 setState(() {});
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '8x25bv0o' /* Let's do this */,
-                              ),
+                              text: 'Review Cost',
                               options: FFButtonOptions(
                                 width: 150.0,
                                 height: 40.0,

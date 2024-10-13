@@ -172,7 +172,7 @@ class _DownloadBadgeWidgetState extends State<DownloadBadgeWidget> {
                             if (buttonAppUsersRow?.plan == 'Free') {
                               logFirebaseEvent(
                                   'Button_close_dialog_drawer_etc');
-                              Navigator.pop(context);
+                              // Navigator.pop(context);
                               logFirebaseEvent('Button_alert_dialog');
                               await showDialog(
                                 context: context,
@@ -207,6 +207,9 @@ class _DownloadBadgeWidgetState extends State<DownloadBadgeWidget> {
 
                             _shouldSetState = true;
                             if ((_model.apiResultv6s?.succeeded ?? true)) {
+                              print(DownloadBadgeCall.url(
+                                (_model.apiResultv6s?.jsonBody ?? ''),
+                              )!);
                               logFirebaseEvent('Button_launch_u_r_l');
                               await launchURL(DownloadBadgeCall.url(
                                 (_model.apiResultv6s?.jsonBody ?? ''),

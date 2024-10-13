@@ -103,9 +103,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'y2tgu804' /* Here are the top learners for ... */,
-                        ),
+                        'Here are the top three highest scorers',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Recolta Alt',
